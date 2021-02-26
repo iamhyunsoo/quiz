@@ -1,3 +1,3 @@
 # algoleezm
 
-This is all coding tests I've tried
+Coding tests I've tried
