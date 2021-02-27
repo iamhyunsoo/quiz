@@ -2,7 +2,7 @@
 
 class Solution {
 public:
-    static double findMedianSortedArrays(std::vector<int>& num1, std::vector<int>& num2)
+    static double findMedianSortedArrays(const std::vector<int>& num1, const std::vector<int>& num2)
     {
         int a = num1.size();
         int b = num2.size();
