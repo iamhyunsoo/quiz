@@ -1,9 +1,4 @@
-#include "LengthOfLongestSubstring.h"
-
-#include <algorithm>
-#include <iostream>
-#include <string.h>
-
+#include <string>
 using namespace std;
 
 class Solution {
@@ -48,9 +43,3 @@ public:
         return R - L - 1;
     }
 };
-
-int main()
-{
-    cout << Solution::longestPalindrome(std::string("babad")) << "\n";
-}
-
