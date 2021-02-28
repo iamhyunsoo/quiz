@@ -10,12 +10,12 @@ public:
         int beforeMedian{ 0 };
         int Median{ 0 };
 
-        int len = (a + b) / 2;
+        int len = (a + b) / 2 + 1;
 
         int currA{ 0 };
         int currB{ 0 };
         
-        for (int i = 0; i <= len; ++i)
+        for (int i = 1; i <= len; ++i)
         {
             if (currA < a && currB < b)
             {
