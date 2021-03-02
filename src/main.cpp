@@ -1,14 +1,13 @@
-#include "LongestPalindrome.h"
+#include "MyAtoi.h"
 
 #include <algorithm>
 #include <iostream>
 #include <string.h>
-
-
+#include <iostream>
+#include <vector>
 using namespace std;
 
 int main()
 {
-    cout << longest(std::string("abb")) <<  "\n";
+    cout << myAtoi("   -341") << endl;
 }
-
