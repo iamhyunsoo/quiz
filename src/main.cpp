@@ -1,13 +1,14 @@
-#include "MyAtoi.h"
+#include "IsMatch.h"
 
 #include <algorithm>
 #include <iostream>
 #include <string.h>
 #include <iostream>
 #include <vector>
+
 using namespace std;
 
 int main()
 {
-    cout << myAtoi("   -341") << endl;
+    cout << Solution::isMatch("aaa", ".*")  << endl;
 }
