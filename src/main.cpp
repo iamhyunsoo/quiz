@@ -1,4 +1,4 @@
-#include "IntToRoman.h"
+#include "LongestCommonPrefix.h"
 
 #include <algorithm>
 #include <iostream>
@@ -10,5 +10,6 @@ using namespace std;
 
 int main()
 {
-    cout << Solution::intToRoman(98)  << endl;
+    std::vector<std::string> vec = {"prex", "prebc", "prepare"};
+    cout << Solution::longestCommonPrefix(vec)  << endl;
 }
