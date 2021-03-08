@@ -10,8 +10,5 @@ using namespace std;
 
 int main()
 {
-    Solution s;
 
-    for (auto x :  s.letterCombinations(std::string("23")))
-         cout << x  << " " << endl;
 }

@@ -1,7 +1,6 @@
 #include <string>
 #include <vector>
 using namespace std;
-
 class S
 {
 public:
@@ -46,43 +45,3 @@ private:
     }
 };
 
-
-class Solution 
-{
-public:
-    vector<string> letterCombinations(string digits) {
-        const int N = digits.size();
-        
-        if (!N) return vector<string>();
-
-        vector<string> res;
-        res.reserve(1 << (2*N));
-        string soFar(N, '\0');
-        
-        generate(res, digits, soFar, 0);
-        
-        return res;
-    }
-    
-private:
-    static constexpr char keys[] = 
-                "abc##" "def##"
-        "ghi##" "jkl##" "mno##"
-        "pqrs#" "tuv##" "wxyz#";
-
-    static inline const char* getKey(char k) {
-        return keys + (k - '2') * 5; 
-    };
-
-    static void generate(vector<string>& res, const string& digits, string& soFar, int k) {
-        const int N = digits.size();
-        if (k < N) {
-            for (const char* ck = getKey(digits[k]); *ck != '#'; ++ck) {
-                soFar[k] = *ck;
-                generate(res, digits, soFar, k+1);
-            }
-        } else {
-            res.push_back(soFar);
-        }       
-    }
-};
