@@ -1,4 +1,4 @@
-#include "LongestCommonPrefix.h"
+#include "LetterComb.h"
 
 #include <algorithm>
 #include <iostream>
@@ -10,6 +10,8 @@ using namespace std;
 
 int main()
 {
-    std::vector<std::string> vec = {"prex", "prebc", "prepare"};
-    cout << Solution::longestCommonPrefix(vec)  << endl;
+    Solution s;
+
+    for (auto x :  s.letterCombinations(std::string("23")))
+         cout << x  << " " << endl;
 }
