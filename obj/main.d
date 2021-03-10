@@ -1,4 +1,4 @@
-obj/main.o: src/main.cpp /usr/include/stdc-predef.h include/FourSum.h \
+obj/main.o: src/main.cpp /usr/include/stdc-predef.h \
  /usr/include/c++/9/algorithm /usr/include/c++/9/utility \
  /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h \
@@ -160,4 +160,6 @@ obj/main.o: src/main.cpp /usr/include/stdc-predef.h include/FourSum.h \
  /usr/include/c++/9/bits/basic_ios.tcc \
  /usr/include/c++/9/bits/ostream.tcc /usr/include/c++/9/istream \
  /usr/include/c++/9/bits/istream.tcc /usr/include/string.h \
- /usr/include/strings.h
+ /usr/include/strings.h include/IsValid.h /usr/include/c++/9/stack \
+ /usr/include/c++/9/deque /usr/include/c++/9/bits/stl_deque.h \
+ /usr/include/c++/9/bits/deque.tcc /usr/include/c++/9/bits/stl_stack.h
