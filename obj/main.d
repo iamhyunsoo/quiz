@@ -160,6 +160,4 @@ obj/main.o: src/main.cpp /usr/include/stdc-predef.h \
  /usr/include/c++/9/bits/basic_ios.tcc \
  /usr/include/c++/9/bits/ostream.tcc /usr/include/c++/9/istream \
  /usr/include/c++/9/bits/istream.tcc /usr/include/string.h \
- /usr/include/strings.h include/MergeKLists.h /usr/include/c++/9/queue \
- /usr/include/c++/9/deque /usr/include/c++/9/bits/stl_deque.h \
- /usr/include/c++/9/bits/deque.tcc /usr/include/c++/9/bits/stl_queue.h
+ /usr/include/strings.h include/DivideTwoIntegers.h
