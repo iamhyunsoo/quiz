@@ -4,13 +4,14 @@
 #include <string.h>
 #include <iostream>
 #include <vector>
-#include "DivideTwoIntegers.h"
+#include "LongestValidParentheses.h"
 
 using namespace std;
 
 
 int main()
 {
-    std::cout << sizeof(long)*8 << std::endl;
-    cout << divide(2147483648, 1) << endl;
+    std::cout << Solution::longestValidParentheses2("()(()") << std::endl;
 }
+
+//() ) ) ()
