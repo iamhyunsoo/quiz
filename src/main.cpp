@@ -4,14 +4,17 @@
 #include <string.h>
 #include <iostream>
 #include <vector>
-#include "LongestValidParentheses.h"
+#include "FindFirstLastInArray.h"
 
 using namespace std;
 
-
 int main()
 {
-    std::cout << Solution::longestValidParentheses2("()(()") << std::endl;
+    std::vector<int> df = {1, 2, 3, 4, 6, 7, 7, 7, 9};
+    for (auto x : searchRange(df, 7))
+    {
+        std::cout << x << std::endl;
+    }
 }
 
 //() ) ) ()
