@@ -160,4 +160,4 @@ obj/main.o: src/main.cpp /usr/include/stdc-predef.h \
  /usr/include/c++/9/bits/basic_ios.tcc \
  /usr/include/c++/9/bits/ostream.tcc /usr/include/c++/9/istream \
  /usr/include/c++/9/bits/istream.tcc /usr/include/string.h \
- /usr/include/strings.h include/FindFirstLastInArray.h
+ /usr/include/strings.h include/CombinationSum.h
