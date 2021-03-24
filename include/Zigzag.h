@@ -26,7 +26,7 @@ public:
                     ret += s[j + cycleLength - i];
                 }
             }
-        }
+        }//
         return ret; 
     }
 };
