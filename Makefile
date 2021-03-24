@@ -1,5 +1,5 @@
 CC=g++
-CXXFLAGS=-g -Wall -std=c++17
+CXXFLAGS=-g -Wall -std=c++14
 LIBS=
 LIB_DIR=
 INCLUDE = -Iinclude/ 
