@@ -1,7 +1,7 @@
 #include <iostream>
 #include <unordered_map>
 #include <vector>
-
+//
 using namespace std;
 
 class TwoSum            //Think it's better than looping twice like one below.
