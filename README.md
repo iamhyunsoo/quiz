@@ -1,3 +1,3 @@
 # quiz
 
-Coding tests I've tried
+Coding tests I've tried.
