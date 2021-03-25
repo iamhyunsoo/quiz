@@ -6,7 +6,7 @@ std::vector< std::vector< int > > ThreeSum(std::vector<int> vec)
 	int size = vec.size();
 	if (size == 0 || (size == 1 && vec[0] == 0))
 	{
-		return ret;
+		return ret; //
 	}
 	
 	std::sort(vec.begin(), vec.end());
