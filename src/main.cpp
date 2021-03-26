@@ -4,14 +4,20 @@
 #include <string.h>
 #include <iostream>
 #include <vector>
-#include "CombinationSum2.h"
-#include "FirstMissingPositive.h"
-#include "TrappingRainWater.h"
+#include "Permutation2.h"
 using namespace std;
 
 int main()
 {
-    vector<int> can = {7,6,5,4,3,1,2};
+    Sol2 s;
+    vector<int> can = {1,2,3,4};
 
-    cout << trappingRainWater(can) << endl;
+    for (auto x : s.permuteUnique(can))
+    {
+        for (auto y :x)
+        {
+            cout << y << ", ";
+        }
+        cout << endl;
+    }
 }
