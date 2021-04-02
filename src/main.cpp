@@ -1,24 +1,12 @@
-
-#include <algorithm>
 #include <iostream>
+#include <stack>
 #include <string.h>
-#include <iostream>
+#include <unistd.h>
 #include <vector>
-#include "PermutationSequence.h"
-using namespace std;
+#include "StackProject.h"
 
 int main()
 {
-    Solution sd;
-    cout << sd.getPermutation(4, 9) << endl;
-   //vector<int> vec = {1,2,3,4};
-    //Sol2 s;
-    //for (auto x : s.permute(vec))
-    //{
-        //for (auto y :x)
-        //{
-            //cout << y << ", ";
-        //}
-        //cout << endl;
-    //}
-}
+    pj j;
+    j.GetResultFromInfixNotation();
+}   
