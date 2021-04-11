@@ -6,6 +6,7 @@ class A
 {
 private:
     vector<vector<int> > ans;
+    
 public:
 
     void help(int idx, vector<int>& tmp, const int& n, const int& k)        //Backtracking
