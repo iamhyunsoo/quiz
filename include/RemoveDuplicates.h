@@ -19,6 +19,7 @@ int RemoveDuplicates(std::vector<int>& nums)
         {
             i++;
             nums[i] = nums[j];
+            j++;
         }
     }
     return i + 1;
