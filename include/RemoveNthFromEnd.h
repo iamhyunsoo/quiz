@@ -1,5 +1,4 @@
 
-
 struct ListNode 
 {
      int val;
