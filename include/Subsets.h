@@ -1,7 +1,7 @@
 #include <cmath>
 #include <vector>
 
-std::vector< std::vector<int> > subsets(std::vector<int>& nums)
+std::vector< std::vector<int> > subsets(std::vector<int>& nums) //elements are all unique
 {
     //Bit mask
     std::vector<std::vector<int>> ans;
