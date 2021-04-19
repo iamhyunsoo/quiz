@@ -1,14 +1,16 @@
 #include "PartitionList.h" 
 #include "ScrambleString.h"
+#include "InterleavingString.h"
 
 #include <iostream>
 using namespace std;
 using ln = ListNode;
 int main()
 {
-    string a = "great";
-    string b = "taerg";
-    cout << isScramble(a,b) << endl;
+    string a = "aabcc";
+    string b = "dbbca";
+    string c = "aadbbcbcac";
+    cout << isInterleave1D(a, b, c) << endl;
     
     ln* node = new ln(1);
     node->next = new ln(4);
