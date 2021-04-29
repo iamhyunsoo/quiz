@@ -1,30 +1,32 @@
-#include "PartitionList.h" 
-#include "ScrambleString.h"
-#include "InterleavingString.h"
-
+#include "PascalTriangle.h"
+#include "PascalTriangle2.h"
 #include <iostream>
 using namespace std;
-using ln = ListNode;
+using std::vector;
 int main()
 {
-    string a = "aabcc";
-    string b = "dbbca";
-    string c = "aadbbcbcac";
-    cout << isInterleave1D(a, b, c) << endl;
-    
-    ln* node = new ln(1);
-    node->next = new ln(4);
-    node->next->next = new ln(3);
-    node->next->next->next = new ln(2);
-    node->next->next->next->next = new ln(5);
-    node->next->next->next->next->next = new ln(2);
-
-    Solution s;
-    ln* ans = s.partition(node, 3);
-    while (ans != nullptr)
+    vector<int> vec(3, 1);
+        cout << "[ ";
+    for (auto u : vec)
     {
-        cout << ans->val << "->";
-        ans = ans->next;
+            cout << u << " ";
     }
-    cout << endl;
+        cout << " ]\n";
+
+        cout << "[ ";
+    for (auto u : getRow(3))
+    {
+            cout << u << " ";
+    }
+        cout << " ]\n";
+
+    for (auto x : generate(5))
+    {
+        cout << "[ ";
+        for (auto y : x)
+        {
+            cout << y << " ";
+        }
+        cout << " ]\n";
+    }
 }
