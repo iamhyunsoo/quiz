@@ -1,10 +1,16 @@
 #include "PascalTriangle.h"
 #include "PascalTriangle2.h"
 #include <iostream>
+#include <cstring>
+#include <string>
 using namespace std;
 using std::vector;
 int main()
 {
+    string a = "sibal";
+    string b = "vibal";
+    cout << strcmp(a.c_str(), b.c_str()) << endl << endl; 
+
     vector<int> vec(3, 1);
         cout << "[ ";
     for (auto u : vec)
