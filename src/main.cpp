@@ -3,6 +3,7 @@
 #include <iostream>
 #include <cstring>
 #include <string>
+#include "MaxPointsonaLine.h"
 using namespace std;
 using std::vector;
 
@@ -119,6 +120,9 @@ private:
 };
 int main()
 {
+    std::vector<std::vector<int>> v = { {1,1}, {3,2}, {5,3}, {4,1}, {2,3}, {1,4} };
+    maxPoints(v);
+
     SS sss;
     vector<vector<char>> vvv ={{ 'X','X','X','X'},
                                 {'X','O','O','X'},
