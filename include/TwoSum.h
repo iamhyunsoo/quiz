@@ -4,7 +4,7 @@
 //
 using namespace std;
 
-class TwoSum            //Think it's better than looping twice like one below.
+class TwoSum            //Think it's better than looping twice like the one below.
 {
 public:
     template<typename T>

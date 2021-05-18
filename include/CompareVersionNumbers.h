@@ -26,7 +26,7 @@ int compareVersion(string version1, string version2)
             num2 = num2 * 10 + (version2[i] - '0');
             j++;
         }
-        
+         
         if (num1 > num2)
         {
             return 1;
