@@ -3,6 +3,6 @@ obj/
 
 main
 
-.vscode/
+.vscode/*
 
 tags
