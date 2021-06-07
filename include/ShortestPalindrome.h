@@ -7,7 +7,7 @@ std::string shortestPalindrome(std::string s)
     std::string rev = s;
     std::reverse(rev.begin(), rev.end());
     std::string l = s + "@" + rev;  
-
+ 
     std::vector<int> v(l.size(), 0);
 
     for (int i = 1; i < l.length(); i++)
