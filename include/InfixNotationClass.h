@@ -1,10 +1,14 @@
-#include <map>
+
+/*
+Purpose   : Return an Answer From an Infix Notation.
+Name      : Hyunsoo Lee
+*/
+
+#include <vector>
 #include <iostream>
 #include <stack>
-#include <string>
+#include <string.h>
 #include <unistd.h>
-#include <vector>
-using namespace std;
 
 class pj
 {
@@ -164,8 +168,14 @@ private:
     std::vector<std::string> mVec;
     std::stack<std::string> mStack;
 };
+
+/*
+
+//Use GetResultFromInfixNotation() to get a notation from a user on runtime.
 int main()
 {
-   pj p;
-   p.GetResultFromInfixNotation(); 
+    pj j;
+    j.GetResultFromInfixNotation();     //Infix notation should look like something like "(5-2*3)+((7*2)-(2*6))"
 }
+
+*/   
