@@ -9,21 +9,21 @@ int jump(std::vector<int>& nums)
     int pastMax = nums[0];
     int nextMax = nums[0];
     int nextIdx {0};
-    int i {0};
+    size_t i {0};
     int jump {0};
     
-    while ((size_t)i < size)
+    while (i < size)
     {
         jump++;
         while (i <= pastMax)
         {
-            if (i + nums[i] >= pastMax)     //Greedy
+            if (i + nums[i] >= nextMax)     //Greedy
             {
                 nextMax = i + nums[i];
                 nextIdx = i;
             }
             i++;
-            if ((size_t)i == size)
+            if (i == size)
             {
                 return jump;
             }
