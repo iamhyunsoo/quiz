@@ -1,3 +1,3 @@
 # quiz
 
-Coding quizs I've tried.
+Coding quizs I've tried..
