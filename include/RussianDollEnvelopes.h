@@ -26,4 +26,23 @@ public:
 		}
 		return dp.size();
 	}
+	
+	int maxEnvelopesDP(std::vector<std::vector<int>>& envelopes)
+	{
+		const int size = envelopes.size();
+		std::vector<int> dp(size, 1);
+		std::sort(envelopes.begin(), envelopes.end());
+		
+		for (int i = 1; i < size; i++)
+		{
+			for (int j = 0; j < i; j++)
+			{
+				if (envelopes[j][0] < envelopes[i][0] && envelopes[j][1] < envelopes[i][1])
+				{
+					dp[i] = std::max(dp[i], dp[j] + 1);
+				}
+			}
+		}
+		return *std::max_element(dp.begin(), dp.end());
+	}
 };
