@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <string>
 
 std::string reverseVowels(std::string s)
