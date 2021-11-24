@@ -1,7 +1,13 @@
+#include <string>
+#include <unordered_map>
+#include <unordered_set>
+#include <list>
+#include <utility>
+
 class AllOne 
 {
 public:
-	void inc(string key)
+	void inc(std::string key)
 	{
 		if (mMap.find(key) == mMap.end())
 		{
@@ -25,7 +31,7 @@ public:
 		}
 	}
 
-	void dec(string key) 
+	void dec(std::string key) 
 	{
 		if (mMap.find(key) == mMap.end())
 		{
@@ -52,12 +58,12 @@ public:
 		}
 	}
 
-	string getMaxKey() 
+	std::string getMaxKey() 
 	{
 		return mPairs.empty() ? "" : *(mPairs.rbegin()->second.begin());
 	}
 
-	string getMinKey() 
+	std::string getMinKey() 
 	{
 		return mPairs.empty() ? "" : *(mPairs.begin()->second.begin());
 	}
