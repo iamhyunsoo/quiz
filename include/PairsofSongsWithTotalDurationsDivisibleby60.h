@@ -1,4 +1,4 @@
-class Solution 
+class Solution1010 
 {
 public:
     int numPairsDivisibleBy60TLE(vector<int>& time) //Time Limit Exceeded 
