@@ -1,45 +1,40 @@
 #include <algorithm>
 #include <vector>
 
-using namespace std;
-
-int maxCoins(std::vector<int>& nums) 
+class Solution312
 {
-	const int size = nums.size();
-	if (!size) return 0;
+public:
+    int maxCoins(std::vector<int>& nums) 
+    {
+#ifdef __GNUC__
+        int size = nums.size();
+        int dp[size + 2][size + 2];
+        int arr[size + 2];
+        arr[0] = arr[size + 1] = 1;
+        for (int i = 1; i < size + 1; i++) arr[i] = nums[i - 1];
+        memset(dp, 0, sizeof(dp));
+#elif _MSC_VER
+        const int size = nums.size();
+        std::vector<std::vector<int>> dp(size + 2, std::vector<int>(size + 2, 0));
+        nums.insert(nums.begin(), 1);
+        nums.push_back(1);
+#endif
 
-	std::vector<std::vector<int>> dp(size, std::vector<int>(size, 0));
-	for (int len = 1; len <= size; ++len)
-	{
-		for (int i = 0; i <= size - len; ++i)
-		{
-			int j = i + len - 1;
-			for (int k = i; k <= j; ++k)
-			{
-				int lValue = 1;
-				int rValue = 1;
-				if (i != 0)
-				{
-					lValue = nums[i - 1];
-				}
-				if (j != size - 1)
-				{
-					rValue = nums[j + 1];
-				}
-
-				int before = 0;
-				int after  = 0;
-				if (i != k)
-				{
-					before = dp[i][k - 1];
-				}
-				if (j != k)
-				{
-					after = dp[k + 1][j];
-				}
-				dp[i][j] = std::max(dp[i][j], before + after + (lValue * nums[k] * rValue));
-			}
-		}
-	}	
-	return dp[0][size - 1];
-}
+        for (int left = size; left >= 1; left--)
+        {
+            for (int right = left; right <= size; right++)
+            {
+                for (int k = left; k <= right; k++)
+                {
+#ifdef __GNUC__
+                    int possibleMaximum = (arr[left - 1] * arr[k] * arr[right + 1]) + dp[left][k - 1] + dp[k + 1][right];
+#elif _MSC_VER
+                    int possibleMaximum = (nums[left - 1] * nums[k] * nums[right + 1]) + dp[left][k - 1] + dp[k + 1][right];
+#endif
+                    dp[left][right] = std::max(dp[left][right], possibleMaximum);
+                }
+            }
+        }
+        return dp[1][size];
+    }
+};
