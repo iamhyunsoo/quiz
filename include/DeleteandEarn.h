@@ -1,25 +1,26 @@
 #include <algorithm>
 #include <vector>
 
-int deleteAndEarn(vector<int>& nums)
+class Solution 
 {
-  int n = 10001;
-  std::vector<int> table(n, 0);
-
-  for (auto const& num : nums)
-  {
-    table[num] += num;
-  }
-
-  int includeI = 0;
-  int excludeI = 0;
-  for (int i = 0 ; i < n ; i++)
-  {
-    int tmpIncludeI = excludeI + table[i];
-    int tmpExcludeI = std::max(includeI, excludeI);
-    includeI = tmpIncludeI;
-    excludeI = tmpExcludeI;
-  }
-
-  return std::max(includeI, excludeI);
-}
+public:
+    int deleteAndEarn(vector<int>& nums) 
+    {
+        const int n = 10001;
+        std::vector<int> newNums(n, 0);
+        for (auto const& num : nums)
+        {
+            newNums[num] += num;
+        }
+        
+        int prev {0};
+        int curr {0};
+        for (int i = 0; i < n; i++)
+        {
+            int tmp = std::max(curr, prev + newNums[i]);
+            prev = curr;
+            curr = tmp;
+        }
+        return curr;
+    }
+};
