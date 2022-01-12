@@ -45,9 +45,3 @@ int main()
     std::string getMinKey() {
         return buckets.empty() ? "" : *(buckets.begin()->keys.begin());
     }
-
-private:
-    struct Bucket { int value; unordered_set<string> keys; };
-    std::list<Bucket> buckets;
-    std::unordered_map<std::string, std::list<Bucket>::iterator> bucketOfKey;
-};
