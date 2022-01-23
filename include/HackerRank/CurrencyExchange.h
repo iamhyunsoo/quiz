@@ -153,6 +153,23 @@ int main()
 	// cout << MaxCurrency({ "USD", "USD", "GBP", "CAD", "CAD" }, { "GBP", "JPY", "JPY", "CNY", "KRW" }, { 0.7, 109, 155, 5.27, 921 }, "USD", "CNY") << endl;
 }
 
+/*
+FX rates list:
+	USD to JPY 1 to 109
+	USD to GBP 1 to 0.71
+	GBP to JPY 1 to 155
+Original currency: USD
+Target currency: JPY
+
+Output:
+Calculated the max target currency will can get.
+
+For example:
+USD to JPY -> 109
+USD to GBP to JPY = 0.71 * 155 = 110.05 > 109
+
+So, the max value will be 110.05
+*/
 
 /*
 Test Input:
