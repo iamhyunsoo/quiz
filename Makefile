@@ -16,7 +16,7 @@ DEPS = $(OBJECTS:.o=.d)
 all: main
 
 $(OBJ_DIR)/%.o : $(SRC_DIR)/%.cpp
-	mkdir -p obj
+	@ mkdir -p obj
 	$(CC) $(CXXFLAGS) $(INCLUDE) -c $< -o $@ -MD $(LDFLAGS) $(LIB_DIR) $(LIBS)
 
 $(TARGET) : $(OBJECTS)
